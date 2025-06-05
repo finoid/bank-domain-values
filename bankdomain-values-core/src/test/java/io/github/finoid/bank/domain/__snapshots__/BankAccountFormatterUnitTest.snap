@@ -1,0 +1,208 @@
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_1150, 9743685_bank_NORDEA]=[
+  "1150,974-3685"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_1255,6548711_bank_DANSKE_BANK]=[
+  "1255,654 8711"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_3300 000620-5124_bank_NORDEA]=[
+  "3300,000620-5124"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_3400, 123 4645_bank_LANSFORSAKRINGAR_BANK]=[
+  "3400,123 4645"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_4564, 154 1970_bank_NORDEA]=[
+  "4564,154-1970"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_5140 321 5642_bank_SEB]=[
+  "5140,321 5642"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_600111000112_bank_HANDELSBANKEN]=[
+  "6001,11 000 112"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_6683764450808_bank_HANDELSBANKEN]=[
+  "6683,764 450 808"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_6789123456789_bank_HANDELSBANKEN]=[
+  "6789,123 456 789"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_8129-9,043 386 711-6_bank_SWEDBANK]=[
+  "8129-9,043 386 711-6"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_8351-9,392 242 224-5_bank_SWEDBANK]=[
+  "8351-9,392 242 224-5"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_8424-4,983 189 224-6_bank_SWEDBANK]=[
+  "8424-4,983 189 224-6"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9045,987 456 128_bank_CITIBANK_FILIAL]=[
+  "9045,9 8745 6128"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9060, 541 6877_bank_LANSFORSAKRINGAR_BANK]=[
+  "9060,541 6877"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9071, 417 23 83_bank_MULTITUDE_BANK_PLC]=[
+  "9071,417 2383"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9108 876 1587_bank_NORDNET_BANK]=[
+  "9108,876 1587"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9160 741 6680_bank_SKANDIABANKEN]=[
+  "9160,741 6680"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9178-516 4155_bank_IKANOBANKEN]=[
+  "9178,516 4155"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9180 331 4218_bank_DANSKE_BANK]=[
+  "9180,331 4218"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9199,321 8647_bank_DNB_BANK_ASA_FILIAL_SVERIGE]=[
+  "9199,321 8647"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9234, 879 1552_bank_MARGINALEN_BANK]=[
+  "9234,879 1552"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9252 132 2148_bank_SBAB_BANK]=[
+  "9252,132 2148"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9273-956 609 3_bank_ICA_BANKEN]=[
+  "9273,956 6093"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9280 689 1477_bank_RESURS_BANK_AB]=[
+  "9280,689 1477"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9340 321 4681_bank_SWEDBANK]=[
+  "9340,32-14681"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9398-2159875_bank_LANDSHYPOTEK]=[
+  "9398,215 9875"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9462 613 5412_bank_SANTANDER_CONSUMER_BANK]=[
+  "9462,613 5412"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9472,456 987 154_bank_BNP_PARIBAS]=[
+  "9472,4 5698 7154"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9530 364 8748_bank_NORDEA_PLUSGIROT]=[
+  "9530,364-8748"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9553-5894364_bank_AVANZA_BANK]=[
+  "9553,589 4364"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9578 633 1128_bank_SPARBANKEN_SYD]=[
+  "9578,633 1128"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9585, 612345740_bank_AION_BANK]=[
+  "9585,6 1234 5740"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9597 984 216 868_bank_EP_BANK]=[
+  "9597,9 8421 6868"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9630, 6541128_bank_LAN_AND_SPAR_BANK_AS_FILIAL]=[
+  "9630,654 1128"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9646, 1230477_bank_NOBA_BANK_GROUP]=[
+  "9646,123 0477"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9664 446 5511_bank_SVEA_BANK]=[
+  "9664,446 5511"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9674-9871358_bank_JAK_MEDLEMSBANK]=[
+  "9674,987 1358"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9683,143 579 155_bank_ENITY_BANK_GROUP]=[
+  "9683,1 4357 9155"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9704,861 957 3564_bank_EKOBANKEN]=[
+  "9704,86 1957 3564"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9714-8924679_bank_LUNAR_BANK]=[
+  "9714,892 4679"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9752-6546873_bank_NORTHMILL_AB]=[
+  "9752,654 6873"
+]
+
+
+se.folksam.devport.bank.domain.BankAccountFormatterUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_97891111113_bank_KLARNA_BANK]=[
+  "9789,111 1113"
+]

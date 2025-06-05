@@ -1,0 +1,1351 @@
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_1150, 9743685_bank_NORDEA]=[
+  {
+    "accountNumber" : {
+      "number" : "9743685"
+    },
+    "bankAndType" : {
+      "bank" : "NORDEA",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 1199,
+                "start" : 1100
+              },
+              {
+                "end" : 2099,
+                "start" : 1400
+              },
+              {
+                "end" : 3299,
+                "start" : 3000
+              },
+              {
+                "end" : 3399,
+                "start" : 3301
+              },
+              {
+                "end" : 3781,
+                "start" : 3410
+              },
+              {
+                "end" : 3999,
+                "start" : 3783
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 1150
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_1255,6548711_bank_DANSKE_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "6548711"
+    },
+    "bankAndType" : {
+      "bank" : "DANSKE_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 1399,
+                "start" : 1200
+              },
+              {
+                "end" : 2499,
+                "start" : 2400
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 1255
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_3300 000620-5124_bank_NORDEA]=[
+  {
+    "accountNumber" : {
+      "number" : "0006205124"
+    },
+    "bankAndType" : {
+      "bank" : "NORDEA",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 3300,
+                "start" : 3300
+              },
+              {
+                "end" : 3782,
+                "start" : 3782
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 3300
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_3400, 123 4645_bank_LANSFORSAKRINGAR_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "1234645"
+    },
+    "bankAndType" : {
+      "bank" : "LANSFORSAKRINGAR_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 3409,
+                "start" : 3400
+              },
+              {
+                "end" : 9069,
+                "start" : 9060
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 3400
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_4564, 154 1970_bank_NORDEA]=[
+  {
+    "accountNumber" : {
+      "number" : "1541970"
+    },
+    "bankAndType" : {
+      "bank" : "NORDEA",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 4999,
+                "start" : 4000
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 4564
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_5140 321 5642_bank_SEB]=[
+  {
+    "accountNumber" : {
+      "number" : "3215642"
+    },
+    "bankAndType" : {
+      "bank" : "SEB",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 5999,
+                "start" : 5000
+              },
+              {
+                "end" : 9124,
+                "start" : 9120
+              },
+              {
+                "end" : 9149,
+                "start" : 9130
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 5140
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_600111000112_bank_HANDELSBANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "11000112"
+    },
+    "bankAndType" : {
+      "bank" : "HANDELSBANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 6999,
+                "start" : 6000
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 6001
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_6683764450808_bank_HANDELSBANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "764450808"
+    },
+    "bankAndType" : {
+      "bank" : "HANDELSBANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 6999,
+                "start" : 6000
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 6683
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_6789123456789_bank_HANDELSBANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "123456789"
+    },
+    "bankAndType" : {
+      "bank" : "HANDELSBANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 6999,
+                "start" : 6000
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 6789
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_8129-9,043 386 711-6_bank_SWEDBANK]=[
+  {
+    "accountNumber" : {
+      "number" : "0433867116"
+    },
+    "bankAndType" : {
+      "bank" : "SWEDBANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 8999,
+                "start" : 8000
+              }
+            ]
+          }
+        ],
+        "subType" : "THREE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 8129,
+      "sortingNumber" : 9
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_8351-9,392 242 224-5_bank_SWEDBANK]=[
+  {
+    "accountNumber" : {
+      "number" : "3922422245"
+    },
+    "bankAndType" : {
+      "bank" : "SWEDBANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 8999,
+                "start" : 8000
+              }
+            ]
+          }
+        ],
+        "subType" : "THREE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 8351,
+      "sortingNumber" : 9
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_8424-4,983 189 224-6_bank_SWEDBANK]=[
+  {
+    "accountNumber" : {
+      "number" : "9831892246"
+    },
+    "bankAndType" : {
+      "bank" : "SWEDBANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 8999,
+                "start" : 8000
+              }
+            ]
+          }
+        ],
+        "subType" : "THREE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 8424,
+      "sortingNumber" : 4
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9045,987 456 128_bank_CITIBANK_FILIAL]=[
+  {
+    "accountNumber" : {
+      "number" : "987456128"
+    },
+    "bankAndType" : {
+      "bank" : "CITIBANK_FILIAL",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9049,
+                "start" : 9040
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9045
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9060, 541 6877_bank_LANSFORSAKRINGAR_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "5416877"
+    },
+    "bankAndType" : {
+      "bank" : "LANSFORSAKRINGAR_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 3409,
+                "start" : 3400
+              },
+              {
+                "end" : 9069,
+                "start" : 9060
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9060
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9071, 417 23 83_bank_MULTITUDE_BANK_PLC]=[
+  {
+    "accountNumber" : {
+      "number" : "4172383"
+    },
+    "bankAndType" : {
+      "bank" : "MULTITUDE_BANK_PLC",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9079,
+                "start" : 9070
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9071
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9108 876 1587_bank_NORDNET_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "8761587"
+    },
+    "bankAndType" : {
+      "bank" : "NORDNET_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9109,
+                "start" : 9100
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9108
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9160 741 6680_bank_SKANDIABANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "7416680"
+    },
+    "bankAndType" : {
+      "bank" : "SKANDIABANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9169,
+                "start" : 9150
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9160
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9178-516 4155_bank_IKANOBANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "5164155"
+    },
+    "bankAndType" : {
+      "bank" : "IKANOBANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9179,
+                "start" : 9170
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9178
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9180 331 4218_bank_DANSKE_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "3314218"
+    },
+    "bankAndType" : {
+      "bank" : "DANSKE_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9189,
+                "start" : 9180
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9180
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9199,321 8647_bank_DNB_BANK_ASA_FILIAL_SVERIGE]=[
+  {
+    "accountNumber" : {
+      "number" : "3218647"
+    },
+    "bankAndType" : {
+      "bank" : "DNB_BANK_ASA_FILIAL_SVERIGE",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9199,
+                "start" : 9190
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9199
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9234, 879 1552_bank_MARGINALEN_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "8791552"
+    },
+    "bankAndType" : {
+      "bank" : "MARGINALEN_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9239,
+                "start" : 9230
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9234
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9252 132 2148_bank_SBAB_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "1322148"
+    },
+    "bankAndType" : {
+      "bank" : "SBAB_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9259,
+                "start" : 9250
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9252
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9273-956 609 3_bank_ICA_BANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "9566093"
+    },
+    "bankAndType" : {
+      "bank" : "ICA_BANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9279,
+                "start" : 9270
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9273
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9280 689 1477_bank_RESURS_BANK_AB]=[
+  {
+    "accountNumber" : {
+      "number" : "6891477"
+    },
+    "bankAndType" : {
+      "bank" : "RESURS_BANK_AB",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9289,
+                "start" : 9280
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9280
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9340 321 4681_bank_SWEDBANK]=[
+  {
+    "accountNumber" : {
+      "number" : "3214681"
+    },
+    "bankAndType" : {
+      "bank" : "SWEDBANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9349,
+                "start" : 9300
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9340
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9398-2159875_bank_LANDSHYPOTEK]=[
+  {
+    "accountNumber" : {
+      "number" : "2159875"
+    },
+    "bankAndType" : {
+      "bank" : "LANDSHYPOTEK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9399,
+                "start" : 9390
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9398
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9462 613 5412_bank_SANTANDER_CONSUMER_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "6135412"
+    },
+    "bankAndType" : {
+      "bank" : "SANTANDER_CONSUMER_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9469,
+                "start" : 9460
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9462
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9472,456 987 154_bank_BNP_PARIBAS]=[
+  {
+    "accountNumber" : {
+      "number" : "456987154"
+    },
+    "bankAndType" : {
+      "bank" : "BNP_PARIBAS",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9479,
+                "start" : 9470
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9472
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9530 364 8748_bank_NORDEA_PLUSGIROT]=[
+  {
+    "accountNumber" : {
+      "number" : "3648748"
+    },
+    "bankAndType" : {
+      "bank" : "NORDEA_PLUSGIROT",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9549,
+                "start" : 9500
+              },
+              {
+                "end" : 9969,
+                "start" : 9960
+              }
+            ]
+          }
+        ],
+        "subType" : "THREE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9530
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9553-5894364_bank_AVANZA_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "5894364"
+    },
+    "bankAndType" : {
+      "bank" : "AVANZA_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9564,
+                "start" : 9550
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9553
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9578 633 1128_bank_SPARBANKEN_SYD]=[
+  {
+    "accountNumber" : {
+      "number" : "6331128"
+    },
+    "bankAndType" : {
+      "bank" : "SPARBANKEN_SYD",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9579,
+                "start" : 9570
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "TWO"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9578
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9585, 612345740_bank_AION_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "612345740"
+    },
+    "bankAndType" : {
+      "bank" : "AION_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9589,
+                "start" : 9580
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9585
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9597 984 216 868_bank_EP_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "984216868"
+    },
+    "bankAndType" : {
+      "bank" : "EP_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9599,
+                "start" : 9590
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9597
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9630, 6541128_bank_LAN_AND_SPAR_BANK_AS_FILIAL]=[
+  {
+    "accountNumber" : {
+      "number" : "6541128"
+    },
+    "bankAndType" : {
+      "bank" : "LAN_AND_SPAR_BANK_AS_FILIAL",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9639,
+                "start" : 9630
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9630
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9646, 1230477_bank_NOBA_BANK_GROUP]=[
+  {
+    "accountNumber" : {
+      "number" : "1230477"
+    },
+    "bankAndType" : {
+      "bank" : "NOBA_BANK_GROUP",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9649,
+                "start" : 9640
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9646
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9664 446 5511_bank_SVEA_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "4465511"
+    },
+    "bankAndType" : {
+      "bank" : "SVEA_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9669,
+                "start" : 9660
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9664
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9674-9871358_bank_JAK_MEDLEMSBANK]=[
+  {
+    "accountNumber" : {
+      "number" : "9871358"
+    },
+    "bankAndType" : {
+      "bank" : "JAK_MEDLEMSBANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9679,
+                "start" : 9670
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9674
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9683,143 579 155_bank_ENITY_BANK_GROUP]=[
+  {
+    "accountNumber" : {
+      "number" : "143579155"
+    },
+    "bankAndType" : {
+      "bank" : "ENITY_BANK_GROUP",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9689,
+                "start" : 9680
+              }
+            ]
+          }
+        ],
+        "subType" : "ONE",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9683
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9704,861 957 3564_bank_EKOBANKEN]=[
+  {
+    "accountNumber" : {
+      "number" : "8619573564"
+    },
+    "bankAndType" : {
+      "bank" : "EKOBANKEN",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9709,
+                "start" : 9700
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9704
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9714-8924679_bank_LUNAR_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "8924679"
+    },
+    "bankAndType" : {
+      "bank" : "LUNAR_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9719,
+                "start" : 9710
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9714
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_9752-6546873_bank_NORTHMILL_AB]=[
+  {
+    "accountNumber" : {
+      "number" : "6546873"
+    },
+    "bankAndType" : {
+      "bank" : "NORTHMILL_AB",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9759,
+                "start" : 9750
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9752
+    }
+  }
+]
+
+
+se.folksam.devport.bank.domain.BankAccountNumberUnitTest.givenBankAccountNumber_whenOfString_thenExpectedBankAccountNumberReturned[account_97891111113_bank_KLARNA_BANK]=[
+  {
+    "accountNumber" : {
+      "number" : "1111113"
+    },
+    "bankAndType" : {
+      "bank" : "KLARNA_BANK",
+      "bankType" : {
+        "accountMaxLength" : 11,
+        "accountMinLength" : 11,
+        "checkNumberRanges" : [
+          {
+            "ranges" : [
+              {
+                "end" : 9789,
+                "start" : 9780
+              }
+            ]
+          }
+        ],
+        "subType" : "TWO",
+        "type" : "ONE"
+      }
+    },
+    "clearingNumber" : {
+      "clearingNumber" : 9789
+    }
+  }
+]
