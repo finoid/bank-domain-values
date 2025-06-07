@@ -13,7 +13,9 @@ import io.github.finoid.bank.domain.maven.plugin.Actor;
 import io.github.finoid.bank.domain.maven.plugin.ActorAccountContext;
 import io.github.finoid.bank.domain.maven.plugin.Type;
 import lombok.NoArgsConstructor;
+import org.codehaus.plexus.component.annotations.Component;
 
+import javax.inject.Singleton;
 import javax.lang.model.element.Modifier;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -31,7 +33,9 @@ import java.util.stream.Collectors;
  * <p>
  * Output is written to a generated source directory using {@link com.palantir.javapoet.JavaFile}.
  */
+@Singleton
 @NoArgsConstructor
+@Component(role = BankEnumGenerator.class)
 public class BankEnumGenerator {
     private static final ClassName BANK_ACCOUNT_TYPE = ClassName.get("io.github.finoid.bank.domain", "BankAccountType");
     private static final ClassName BANK_ACCOUNT_SUB_TYPE = ClassName.get("io.github.finoid.bank.domain", "BankAccountSubType");
