@@ -1,19 +1,28 @@
 package io.github.finoid.bank.domain.maven.plugin.parser.csv;
 
-import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import io.github.finoid.bank.domain.maven.plugin.parser.Parser;
 import io.github.finoid.bank.domain.maven.plugin.parser.ValueProcessor;
+import io.github.finoid.bank.domain.maven.plugin.util.Precondition;
+import lombok.SneakyThrows;
+import org.codehaus.plexus.component.annotations.Component;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Stream;
 
-@RequiredArgsConstructor
+@Singleton
+@Component(role = Parser.class, hint = "csv")
 public class CsvParser<T> implements Parser<T> {
-    private final LineParser lineParser; // TODO (nw) as in-parameter or composition
+    private final LineParser lineParser;
+
+    @Inject
+    public CsvParser(final LineParser lineParser) {
+        this.lineParser = Precondition.nonNull(lineParser, "LineParser must not be null.");
+    }
 
     @Override
     @SneakyThrows

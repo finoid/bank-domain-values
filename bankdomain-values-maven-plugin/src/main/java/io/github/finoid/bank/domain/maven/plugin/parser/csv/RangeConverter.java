@@ -1,17 +1,21 @@
 package io.github.finoid.bank.domain.maven.plugin.parser.csv;
 
 import com.google.common.base.Splitter;
-import org.apache.commons.lang3.StringUtils;
-import org.jspecify.annotations.Nullable;
 import io.github.finoid.bank.domain.maven.plugin.Range;
 import io.github.finoid.bank.domain.maven.plugin.exceptions.ParseException;
+import org.apache.commons.lang3.StringUtils;
+import org.codehaus.plexus.component.annotations.Component;
+import org.jspecify.annotations.Nullable;
 
+import javax.inject.Singleton;
 import java.util.List;
 
 /**
  * Converts a delimited string into an {@link Range} instance.
  * Expected format: {@code startIndex<delimiter>endIndex" (e.g., "1:2")}
  */
+@Singleton
+@Component(role = Converter.class, hint = "range")
 public class RangeConverter implements Converter<String, Range<Integer>> {
     @Override
     public Range<Integer> convert(@Nullable String value, final ConverterContext converterContext) {

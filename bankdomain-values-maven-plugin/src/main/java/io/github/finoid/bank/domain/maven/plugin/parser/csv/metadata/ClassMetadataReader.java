@@ -1,12 +1,16 @@
 package io.github.finoid.bank.domain.maven.plugin.parser.csv.metadata;
 
-import lombok.RequiredArgsConstructor;
 import io.github.finoid.bank.domain.maven.plugin.Cache;
+import lombok.RequiredArgsConstructor;
+import org.codehaus.plexus.component.annotations.Component;
 
+import javax.inject.Singleton;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+@Singleton
+@Component(role = ClassMetadataReader.class)
 @RequiredArgsConstructor
 public class ClassMetadataReader {
     private final Cache<Class<?>, ClassMetadata> cache = new Cache<>();

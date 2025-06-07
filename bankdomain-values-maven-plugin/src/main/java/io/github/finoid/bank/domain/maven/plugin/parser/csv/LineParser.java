@@ -1,15 +1,18 @@
 package io.github.finoid.bank.domain.maven.plugin.parser.csv;
 
-import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.StringUtils;
-import org.jspecify.annotations.Nullable;
 import io.github.finoid.bank.domain.maven.plugin.exceptions.ParseException;
 import io.github.finoid.bank.domain.maven.plugin.parser.csv.metadata.ClassMetadata;
 import io.github.finoid.bank.domain.maven.plugin.parser.csv.metadata.ClassMetadataReader;
 import io.github.finoid.bank.domain.maven.plugin.parser.csv.metadata.FieldMetadata;
+import io.github.finoid.bank.domain.maven.plugin.util.Precondition;
 import io.github.finoid.bank.domain.maven.plugin.util.ReflectionUtils;
 import io.github.finoid.bank.domain.maven.plugin.util.StreamUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.codehaus.plexus.component.annotations.Component;
+import org.jspecify.annotations.Nullable;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
@@ -24,10 +27,17 @@ import java.util.stream.Collectors;
  * Parsing is performed using reflection and annotation metadata via {@link Column},
  * with optional converters specified for type-safe transformation of field values.
  */
-@RequiredArgsConstructor
+@Singleton
+@Component(role = LineParser.class)
 public class LineParser {
     private final ValueConverter valueConverter;
     private final ClassMetadataReader classMetadataReader;
+
+    @Inject
+    public LineParser(final ValueConverter valueConverter, final ClassMetadataReader classMetadataReader) {
+        this.valueConverter = Precondition.nonNull(valueConverter, "ValueConverter must not be null.");
+        this.classMetadataReader = Precondition.nonNull(classMetadataReader, "ClassMetadataReader must not be null.");
+    }
 
     /**
      * Parses a line of input text into an object of type {@code T}, using the provided context.
