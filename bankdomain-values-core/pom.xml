@@ -36,7 +36,6 @@
                 <configuration>
                     <codeQuality>
                         <sourceRoot>${project.build.directory}/generated-sources/</sourceRoot>
-                        <csvFilePath>test.csv</csvFilePath>
                     </codeQuality>
                 </configuration>
                 <executions>

@@ -2,6 +2,7 @@ package io.github.finoid.bank.domain.maven.plugin;
 
 import lombok.Data;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.jspecify.annotations.Nullable;
 
 @Data
 public class Configuration {
@@ -14,6 +15,11 @@ public class Configuration {
     @Parameter(property = "bd.sourceRoot", defaultValue = "${project.build.directory}/generated-sources")
     private String sourceRoot;
 
-    @Parameter(property = "bd.sourceRoot", defaultValue = "clearingnummertabell-for-nedladdning.csv")
-    private String csvFilePath = "clearingnummertabell-for-nedladdning.csv";
+    @Nullable
+    @Parameter(property = "bd.csvFilePath")
+    private String csvFilePath;
+
+    public boolean hasCsvFilePath() {
+        return csvFilePath != null && !csvFilePath.isEmpty();
+    }
 }
