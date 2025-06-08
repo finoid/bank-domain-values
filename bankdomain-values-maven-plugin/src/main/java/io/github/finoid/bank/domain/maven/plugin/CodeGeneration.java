@@ -49,10 +49,10 @@ public class CodeGeneration extends AbstractMojo {
                           final BankEnumGenerator bankEnumGenerator,
                           final Parser<ActorAccountContext> parser) {
         this.configuration = Precondition.nonNull(configuration, "Configuration must not be null.");
-        this.mavenSession = Precondition.nonNull(mavenSession, "MavenSession must not be null.");;
-        this.mavenProject = Precondition.nonNull(mavenProject, "MavenProject must not be null.");;
-        this.bankEnumGenerator = Precondition.nonNull(bankEnumGenerator, "BankEnumGenerator must not be null.");;
-        this.parser = Precondition.nonNull(parser, "Parser must not be null.");;
+        this.mavenSession = Precondition.nonNull(mavenSession, "MavenSession must not be null.");
+        this.mavenProject = Precondition.nonNull(mavenProject, "MavenProject must not be null.");
+        this.bankEnumGenerator = Precondition.nonNull(bankEnumGenerator, "BankEnumGenerator must not be null.");
+        this.parser = Precondition.nonNull(parser, "Parser must not be null.");
     }
 
     @Override
