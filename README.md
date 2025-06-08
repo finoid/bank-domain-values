@@ -2,7 +2,7 @@
 
 Java library for Domain-Driven Design (DDD), providing essential building blocks such as value objects for the bank domain
 <div align="center">
-  <img src=".github/assets/finoid-maven-parent.jpg" width="256">
+  <img src=".github/assets/finoid-bank-domain-values.jpg" width="256">
 </div>
 
 # API
