@@ -1,7 +1,10 @@
 package io.github.finoid;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.teavm.jso.dom.html.HTMLDocument;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Client {
     public static void main(String[] args) {
         var document = HTMLDocument.current();

@@ -48,3 +48,18 @@ jobs:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
+      - name: Prepare files for GitHub Pages
+        run: |
+          mkdir -p publish
+          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm publish/
+          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm.map publish/
+          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm.teadbg publish/
+          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm-runtime.js publish/
+          cp bankdomain-values-wasm/src/main/webapp/index.html publish/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./publish
