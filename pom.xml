@@ -43,6 +43,7 @@
     <modules>
         <module>bankdomain-values-maven-plugin</module>
         <module>bankdomain-values-core</module>
+        <module>bankdomain-values-wasm</module>
     </modules>
 
     <dependencyManagement>
