@@ -26,6 +26,8 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <codequality-maven-plugin.version>0.12.0</codequality-maven-plugin.version>
+
         <checker-qual.version>3.49.0</checker-qual.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
         <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>

@@ -49,6 +49,7 @@ public class BankAccountNumber {
      *
      * @param accountNumber a numeric representation of the account
      * @return a new {@code BankAccountNumber} instance
+     * @throws IllegalNumberBankDomainException if the input is invalid
      */
     public static BankAccountNumber ofNumber(final Long accountNumber) {
         return Factory.fromLong(accountNumber);
@@ -59,6 +60,7 @@ public class BankAccountNumber {
      *
      * @param input string that may include spaces, hyphens, etc.
      * @return a new {@code BankAccountNumber} instance
+     * @throws IllegalNumberBankDomainException if the input is invalid
      */
     public static BankAccountNumber ofString(final String input) {
         return Factory.fromString(input);
@@ -70,6 +72,7 @@ public class BankAccountNumber {
      * @param clearing 4- or 5-digit clearing number
      * @param account  account number (should not contain the clearing number part)
      * @return a new {@code BankAccountNumber} instance
+     * @throws IllegalNumberBankDomainException if the clearing and/or account is invalid
      */
     public static BankAccountNumber ofClearingAndAccountNumber(final int clearing, final int account) {
         return Factory.fromNumbers(clearing, account);
@@ -149,6 +152,7 @@ public class BankAccountNumber {
          *
          * @param fullNumber a number containing both clearing and account digits
          * @return a valid {@link BankAccountNumber}
+         * @throws IllegalNumberBankDomainException if the input is invalid
          */
         public static BankAccountNumber fromLong(long fullNumber) {
             return fromString(Long.toString(fullNumber));

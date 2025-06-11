@@ -5,6 +5,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.jspecify.annotations.Nullable;
 
 @Data
+@SuppressWarnings("NullAway.Init")
 public class Configuration {
     /**
      * Whether the checkstyle analyzer should be enabled or disabled.
