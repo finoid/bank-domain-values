@@ -62,4 +62,13 @@ public class BankType {
         return checkNumberRanges.stream()
             .anyMatch(range -> range.isWithinRange(number));
     }
+
+    /**
+     * Returns a string representation of this bank type in the format {@code typeDigits:subTypeDigits}.
+     *
+     * @return string representation of type and subtype
+     */
+    public String typesAsString() {
+        return type.toDigits() + ":" + subType.toDigits();
+    }
 }

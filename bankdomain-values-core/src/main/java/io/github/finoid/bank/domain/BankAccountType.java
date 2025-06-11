@@ -5,4 +5,9 @@ public enum BankAccountType {
     ONE,
     // Type 2 accounts - the messy ones
     TWO;
+
+    @SuppressWarnings("EnumOrdinal")
+    public int toDigits() {
+        return ordinal() + 1;
+    }
 }
