@@ -7,7 +7,7 @@ public enum Type {
     public static Type ofIndice(final int value) {
         final Type[] values = values();
 
-        if (values.length < value) {
+        if (value < 1 || value > values.length) {
             throw new IllegalArgumentException("Invalid indice: " + value);
         }
 
