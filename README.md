@@ -10,7 +10,7 @@ Java library for Domain-Driven Design (DDD), providing essential building blocks
 ## Parse and validate from raw input
 ```java 
 BankAccountNumber account = BankAccountNumber.ofString("8351-9, 392 242 224-5");
-System.out.println(account.toFormat()); // 8351-3922422245
+System.out.println(account.toFormatted(BankAccountFormatter.Format.PRETTY)); // 8351-3922422245
 ```
 
 ## From long or numeric input
