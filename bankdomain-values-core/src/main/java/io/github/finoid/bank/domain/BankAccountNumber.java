@@ -202,7 +202,7 @@ public class BankAccountNumber {
 
         private static void assertMod10(final String toBeValidated) {
             if (!MathUtils.isMod10(toBeValidated)) {
-                throw new IllegalNumberBankDomainException("Invalid clearing and/or account number. Mod11 check failed: " + toBeValidated);
+                throw new IllegalNumberBankDomainException("Invalid clearing and/or account number. Mod10 check failed: " + toBeValidated);
             }
         }
 
