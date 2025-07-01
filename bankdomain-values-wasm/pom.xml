@@ -21,7 +21,7 @@
 
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-        <teavm.version>0.12.1</teavm.version>
+        <teavm.version>0.12.2</teavm.version>
 
         <code-quality.feature.error-prone>false</code-quality.feature.error-prone>
     </properties>
