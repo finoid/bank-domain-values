@@ -7,7 +7,7 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>io.github.finoid</groupId>
-        <version>0.10.0</version>
+        <version>0.11.1</version>
     </parent>
 
     <groupId>io.github.finoid</groupId>
@@ -25,8 +25,6 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <codequality-maven-plugin.version>0.12.0</codequality-maven-plugin.version>
 
         <checker-qual.version>3.49.5</checker-qual.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>

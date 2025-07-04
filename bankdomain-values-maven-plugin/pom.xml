@@ -172,6 +172,39 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-versions</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <!-- Override rules: we cannot ban commons-logging:commons-logging as it is an integral part of some Maven plugin dependencies -->
+                                <bannedDependencies>
+                                    <excludes>
+                                        <exclude>log4j:log4j</exclude>
+                                        <!-- Ban vulnerable versions -->
+                                        <exclude>log4j:log4j:[,2.15.0)</exclude>
+                                    </excludes>
+                                </bannedDependencies>
+                                <banDuplicateClasses>
+                                    <ignoreClasses>
+                                        <ignoreClass>module-info</ignoreClass>
+                                    </ignoreClasses>
+                                    <ignoreWhenIdentical>true</ignoreWhenIdentical>
+                                    <scopes>
+                                        <scope>compile</scope>
+                                    </scopes>
+                                </banDuplicateClasses>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>${maven-plugin-plugin.version}</version>
                 <configuration>
