@@ -3,12 +3,12 @@ name: Publish to Maven Central
 on:
   release:
     types: [published]
+
 jobs:
   publish:
     name: Publish Maven package
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,6 +25,18 @@ jobs:
           server-username: OSSRH_USERNAME
           server-password: OSSRH_PASSWORD
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+
+      # Set reproducible build timestamp
+      - name: Set build timestamp
+        run: |
+          # Use the commit timestamp for reproducibility
+          COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
+          BUILD_TIMESTAMP=$(date -u -d @${COMMIT_TIMESTAMP} +"%Y-%m-%dT%H:%M:%SZ")
+          echo "BUILD_TIMESTAMP=$BUILD_TIMESTAMP" >> $GITHUB_ENV
+          echo "Setting build timestamp to: $BUILD_TIMESTAMP"
+
+      - name: Build and Test
+        run: mvn clean verify --batch-mode -Dproject.build.outputTimestamp="${BUILD_TIMESTAMP}"
 
       - name: Determine version from tag
         id: version
@@ -43,23 +55,15 @@ jobs:
         run: mvn versions:set -DnewVersion=${VERSION} -DgenerateBackupPoms=false
 
       - name: Publish to Maven Central
-        run: mvn deploy --batch-mode
+        run: mvn deploy --batch-mode -Dproject.build.outputTimestamp="${BUILD_TIMESTAMP}"
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
-      - name: Prepare files for GitHub Pages
+      # Verify reproducibility
+      - name: Verify reproducible build
         run: |
-          mkdir -p publish
-          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm publish/
-          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm.map publish/
-          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm.teadbg publish/
-          cp bankdomain-values-wasm/target/generated/wasm/teavm/classes.wasm-runtime.js publish/
-          cp bankdomain-values-wasm/src/main/webapp/index.html publish/
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./publish
+          echo "Verifying build reproducibility..."
+          mvn clean verify -Dproject.build.outputTimestamp="${BUILD_TIMESTAMP}"
+          mvn artifact:compare -Dproject.build.outputTimestamp="${BUILD_TIMESTAMP}"
