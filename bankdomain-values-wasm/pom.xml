@@ -53,29 +53,6 @@
         </dependency>
     </dependencies>
 
-    <developers>
-        <developer>
-            <id>nicklaswallgren</id>
-            <name>Nicklas Wallgren</name>
-            <email>nicklas.wallgren@gmail.com</email>
-        </developer>
-    </developers>
-
-    <licenses>
-        <license>
-            <name>The MIT License</name>
-            <url>https://opensource.org/licenses/MIT</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <url>https://github.com/finoid/code-style</url>
-        <connection>scm:git:https://github.com/finoid/bank-domain-values.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/finoid/bank-domain-values.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
     <build>
         <plugins>
             <plugin>

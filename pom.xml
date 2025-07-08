@@ -148,6 +148,11 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
                 <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <!-- Preserve important metadata -->
+                    <flattenMode>oss</flattenMode>
+                    <updatePomFile>true</updatePomFile>
+                </configuration>
                 <executions>
                     <execution>
                         <id>flatten</id>
