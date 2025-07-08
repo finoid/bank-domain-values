@@ -11,6 +11,8 @@
     </parent>
 
     <artifactId>bankdomain-values-maven-plugin</artifactId>
+    <name>finoid-bankdomain-values-maven-plugin</name>
+    <description>Maven plugin for finoid-bank-domain-values</description>
     <packaging>maven-plugin</packaging>
 
     <properties>
@@ -167,6 +169,29 @@
             <version>${mojo-executor.version}</version>
         </dependency>
     </dependencies>
+
+    <developers>
+        <developer>
+            <id>nicklaswallgren</id>
+            <name>Nicklas Wallgren</name>
+            <email>nicklas.wallgren@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>The MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/finoid/code-style</url>
+        <connection>scm:git:https://github.com/finoid/bank-domain-values.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/finoid/bank-domain-values.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <build>
         <plugins>
