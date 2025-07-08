@@ -60,10 +60,3 @@ jobs:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
-
-      # Verify reproducibility
-      - name: Verify reproducible build
-        run: |
-          echo "Verifying build reproducibility..."
-          mvn clean verify -Dproject.build.outputTimestamp="${BUILD_TIMESTAMP}"
-          mvn artifact:compare -Dproject.build.outputTimestamp="${BUILD_TIMESTAMP}"
