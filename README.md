@@ -1,9 +1,21 @@
 # Finoid Bank Domain Values
 
-Java library for Domain-Driven Design (DDD), providing essential building blocks such as value objects for the bank domain
+Java library for Domain-Driven Design (DDD), providing essential building blocks such as value classes for the bank domain
 <div align="center">
   <img src=".github/assets/finoid-bank-domain-values.jpg" width="256">
 </div>
+
+## Modules
+
+- **bankdomain-values-core** – Core domain value classes for modeling banking identity concepts in a DDD style.
+- **bankdomain-values-maven-plugin** – A Maven plugin that generates the `Bank` enum from a CSV file published by [bankinfrastruktur.se](https://www.bankinfrastruktur.se).
+- **bankdomain-values-wasm** – A WebAssembly module that provides a simple validation page for BankID accounts.
+
+## What is a domain value class?
+
+A **domain value class** represents a well-defined concept in the domain model with built-in validation and
+constraints. Typically immutable, these classes ensure data integrity, enforce domain rules, and increase clarity and maintainability
+in your codebase.
 
 # API
 
