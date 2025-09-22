@@ -37,7 +37,7 @@
 
         <!-- Test dependencies -->
         <junit-jupiter.version>5.13.4</junit-jupiter.version>
-        <mockito-junit-jupiter.version>5.19.0</mockito-junit-jupiter.version>
+        <mockito-junit-jupiter.version>5.20.0</mockito-junit-jupiter.version>
     </properties>
 
     <modules>
