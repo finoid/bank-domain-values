@@ -22,7 +22,7 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <checker-qual.version>3.52.0</checker-qual.version>
+        <checker-qual.version>3.52.1</checker-qual.version>
         <commons-lang3.version>3.20.0</commons-lang3.version>
         <doxia.version>2.0.0</doxia.version>
         <guava.version>33.5.0-jre</guava.version>
