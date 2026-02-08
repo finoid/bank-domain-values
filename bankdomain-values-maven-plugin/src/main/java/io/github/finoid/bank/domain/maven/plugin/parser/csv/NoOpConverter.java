@@ -1,12 +1,12 @@
 package io.github.finoid.bank.domain.maven.plugin.parser.csv;
 
-import org.codehaus.plexus.component.annotations.Component;
 import org.jspecify.annotations.Nullable;
 
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 @Singleton
-@Component(role = Converter.class, hint = "noOp")
+@Named("noOp")
 public final class NoOpConverter implements Converter<String, Object> {
     @Override
     @Nullable

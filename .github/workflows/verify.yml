@@ -14,11 +14,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Binaryen
+        run: |
+          curl -sSL https://github.com/WebAssembly/binaryen/releases/download/version_121/binaryen-version_121-x86_64-linux.tar.gz -o binaryen.tar.gz
+          tar -xzf binaryen.tar.gz
+          sudo cp binaryen-version_121/bin/* /usr/local/bin/
+          rm -rf binaryen.tar.gz binaryen-version_121
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: 'graalvm'
+          java-version: '25'
           cache: 'maven'
           server-id: central
           server-username: OSSRH_USERNAME

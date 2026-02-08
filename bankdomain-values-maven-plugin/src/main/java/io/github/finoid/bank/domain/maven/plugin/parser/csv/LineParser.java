@@ -8,7 +8,7 @@ import io.github.finoid.bank.domain.maven.plugin.util.Precondition;
 import io.github.finoid.bank.domain.maven.plugin.util.ReflectionUtils;
 import io.github.finoid.bank.domain.maven.plugin.util.StreamUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.codehaus.plexus.component.annotations.Component;
+import javax.inject.Named;
 import org.jspecify.annotations.Nullable;
 
 import javax.inject.Inject;
@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
  * with optional converters specified for type-safe transformation of field values.
  */
 @Singleton
-@Component(role = LineParser.class)
+@Named
 public class LineParser {
     private final ValueConverter valueConverter;
     private final ClassMetadataReader classMetadataReader;

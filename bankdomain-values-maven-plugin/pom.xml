@@ -16,10 +16,10 @@
     <packaging>maven-plugin</packaging>
 
     <properties>
-        <java.version>17</java.version>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.release>17</maven.compiler.release>
+        <java.version>25</java.version>
+        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <checker-qual.version>3.53.1</checker-qual.version>
@@ -40,20 +40,13 @@
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <maven.version>3.9.12</maven.version>
         <mojo-executor.version>2.4.1</mojo-executor.version>
-        <plexus-component-annotations.version>2.2.0</plexus-component-annotations.version>
-        <plexus-component-metadata.version>2.2.0</plexus-component-metadata.version>
         <plexus-utils.version>4.0.2</plexus-utils.version>
-        <sisu-maven-plugin.version>0.3.5</sisu-maven-plugin.version>
+        <sisu-maven-plugin.version>0.9.0.M4</sisu-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <!-- Force specific versions of conflicting dependencies -->
-            <dependency>
-                <groupId>org.codehaus.plexus</groupId>
-                <artifactId>plexus-component-annotations</artifactId>
-                <version>${plexus-component-annotations.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.codehaus.plexus</groupId>
                 <artifactId>plexus-utils</artifactId>
@@ -149,11 +142,6 @@
             <artifactId>checker-qual</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-component-annotations</artifactId>
-            <version>${plexus-component-annotations.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
             <version>${jspecify.version}</version>
@@ -231,19 +219,6 @@
                         <id>generate-index</id>
                         <goals>
                             <goal>main-index</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.plexus</groupId>
-                <artifactId>plexus-component-metadata</artifactId>
-                <version>${plexus-component-metadata.version}</version>
-                <executions>
-                    <execution>
-                        <id>process-annotations</id>
-                        <goals>
-                            <goal>generate-metadata</goal>
                         </goals>
                     </execution>
                 </executions>
