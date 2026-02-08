@@ -20,6 +20,7 @@ in your codebase.
 
 ## Requirements
 - **GraalVM 25** (required for compiling the `bankdomain-values-wasm-graalvm` module)
+- **Binaryen toolchain** in version 119 or later and on the system path (required for compiling the `bankdomain-values-wasm-graalvm` module)
 
 ## Installation
 
