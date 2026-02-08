@@ -4,9 +4,8 @@ import io.github.finoid.bank.domain.maven.plugin.parser.Parser;
 import io.github.finoid.bank.domain.maven.plugin.parser.ValueProcessor;
 import io.github.finoid.bank.domain.maven.plugin.util.Precondition;
 import lombok.SneakyThrows;
-import org.codehaus.plexus.component.annotations.Component;
-
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.inject.Singleton;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -15,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.stream.Stream;
 
 @Singleton
-@Component(role = Parser.class, hint = "csv")
+@Named
 public class CsvParser<T> implements Parser<T> {
     private final LineParser lineParser;
 

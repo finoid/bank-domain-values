@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bank Account Validator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" charset="utf-8" src="classes.wasm-runtime.js"></script>
+    <style>
+        :root {
+            --bg: #f0f2f5;
+            --fg: #1a1a2e;
+            --card-bg: #fff;
+            --card-shadow: rgba(0, 0, 0, 0.08);
+            --muted: #6b7280;
+            --label: #374151;
+            --input-bg: #fff;
+            --input-border: #d1d5db;
+            --input-focus: #6366f1;
+            --input-focus-ring: rgba(99, 102, 241, 0.12);
+            --btn-bg: #6366f1;
+            --btn-hover: #4f46e5;
+            --btn-active: #4338ca;
+            --valid-bg: #f0fdf4;
+            --valid-border: #bbf7d0;
+            --valid-badge-bg: #dcfce7;
+            --valid-badge-fg: #166534;
+            --invalid-bg: #fef2f2;
+            --invalid-border: #fecaca;
+            --invalid-badge-bg: #fee2e2;
+            --invalid-badge-fg: #991b1b;
+            --toggle-bg: transparent;
+            --toggle-fg: #6b7280;
+            --toggle-hover: #e5e7eb;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1117;
+            --fg: #e5e7eb;
+            --card-bg: #1a1d27;
+            --card-shadow: rgba(0, 0, 0, 0.4);
+            --muted: #9ca3af;
+            --label: #d1d5db;
+            --input-bg: #111318;
+            --input-border: #374151;
+            --input-focus: #818cf8;
+            --input-focus-ring: rgba(129, 140, 248, 0.15);
+            --btn-bg: #6366f1;
+            --btn-hover: #818cf8;
+            --btn-active: #6366f1;
+            --valid-bg: #052e16;
+            --valid-border: #166534;
+            --valid-badge-bg: #14532d;
+            --valid-badge-fg: #86efac;
+            --invalid-bg: #450a0a;
+            --invalid-border: #991b1b;
+            --invalid-badge-bg: #7f1d1d;
+            --invalid-badge-fg: #fca5a5;
+            --toggle-bg: transparent;
+            --toggle-fg: #9ca3af;
+            --toggle-hover: #252830;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg);
+            color: var(--fg);
+            padding: 1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .container {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px var(--card-shadow);
+            width: 100%;
+            max-width: 460px;
+            position: relative;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.25rem;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .theme-toggle {
+            padding: 0.375rem;
+            background: var(--toggle-bg);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--toggle-fg);
+            font-size: 1.125rem;
+            line-height: 1;
+            transition: background 0.15s;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle:hover {
+            background: var(--toggle-hover);
+        }
+
+        .theme-toggle .icon-sun,
+        .theme-toggle .icon-moon { display: none; }
+
+        :root .theme-toggle .icon-moon { display: inline; }
+        [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+        [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+        .subtitle {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .subtitle .badge {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 0.125rem 0.5rem;
+            border-radius: 4px;
+            background: var(--input-focus-ring);
+            color: var(--input-focus);
+            vertical-align: middle;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--label);
+            margin-bottom: 0.375rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 0.625rem 0.75rem;
+            font-size: 0.9375rem;
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            outline: none;
+            background: var(--input-bg);
+            color: var(--fg);
+            transition: border-color 0.15s, background 0.2s;
+            font-family: "SF Mono", "Cascadia Code", "Fira Code", monospace;
+            letter-spacing: 0.025em;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--input-focus);
+            box-shadow: 0 0 0 3px var(--input-focus-ring);
+        }
+
+        input[type="text"]::placeholder {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            letter-spacing: normal;
+            color: var(--muted);
+        }
+
+        button#submit {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            background: var(--btn-bg);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.15s;
+            white-space: nowrap;
+        }
+
+        button#submit:hover {
+            background: var(--btn-hover);
+        }
+
+        button#submit:active {
+            background: var(--btn-active);
+        }
+
+        #output:empty {
+            display: none;
+        }
+
+        .result {
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        .result--valid {
+            background: var(--valid-bg);
+            border: 1px solid var(--valid-border);
+        }
+
+        .result--invalid {
+            background: var(--invalid-bg);
+            border: 1px solid var(--invalid-border);
+        }
+
+        .result__status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.125rem 0.5rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .result--valid .result__status {
+            background: var(--valid-badge-bg);
+            color: var(--valid-badge-fg);
+        }
+
+        .result--invalid .result__status {
+            background: var(--invalid-badge-bg);
+            color: var(--invalid-badge-fg);
+        }
+
+        .result__message {
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .result__grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.375rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .result__label {
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .result__value {
+            font-weight: 500;
+            color: var(--fg);
+            font-family: "SF Mono", "Cascadia Code", "Fira Code", monospace;
+            font-size: 0.8125rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        (function() {
+            var stored = localStorage.getItem('theme');
+            if (stored) {
+                document.documentElement.setAttribute('data-theme', stored);
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <script>
+        async function main() {
+            let teavm = await TeaVM.wasmGC.load("classes.wasm", {
+                stackDeobfuscator: {
+                    enabled: false
+                }
+            });
+            teavm.exports.main([]);
+        }
+
+        function toggleTheme() {
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+</head>
+<body onload="main()">
+    <div class="container">
+        <div class="header">
+            <h1>Bank Account Validator</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <span class="icon-sun">&#9788;</span>
+                <span class="icon-moon">&#9790;</span>
+            </button>
+        </div>
+        <p class="subtitle">Validate Swedish bank account numbers <span class="badge">Java / WebAssembly</span></p>
+        <label for="name">Account number</label>
+        <div class="input-group">
+            <input type="text" id="name" placeholder="e.g. 3300 1234567890"/>
+            <button id="submit">Validate</button>
+        </div>
+        <div id="output"></div>
+    </div>
+</body>
+</html>

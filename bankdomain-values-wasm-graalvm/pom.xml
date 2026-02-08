@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.github.finoid</groupId>
+        <artifactId>bank-domain-values-parent</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>bankdomain-values-wasm-graalvm</artifactId>
+    <name>finoid-bankdomain-values-wasm-graalvm</name>
+    <description>WASM module for finoid-bank-domain-values</description>
+
+    <properties>
+        <java.version>25</java.version>
+        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- To bypass compilation failure due to jdk.jdeps -->
+        <maven.compiler.release></maven.compiler.release>
+
+        <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
+        <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
+        <native-maven-plugin.version>0.11.4</native-maven-plugin.version>
+
+        <code-quality.feature.enabled>false</code-quality.feature.enabled>
+        <code-quality.feature.error-prone>false</code-quality.feature.error-prone>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.finoid</groupId>
+            <artifactId>bankdomain-values-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${jakarta.servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-webapp-to-teavm-output</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/webapp</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven-jar-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                        <arg>--add-exports=jdk.jdeps/com.sun.tools.javap=ALL-UNNAMED</arg>
+                        <arg>--add-modules=jdk.jdeps</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
+                <version>${native-maven-plugin.version}</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>build-native</id>
+                        <goals>
+                            <goal>compile-no-fork</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <skipBaseSBOM>true</skipBaseSBOM>
+                    <mainClass>io.github.finoid.WebMain</mainClass>
+                    <buildArgs>
+                        <!-- Enable Web Image -->
+                        <buildArg>--tool:svm-wasm</buildArg>
+                        <!-- Annotate Wasm module with debug info -->
+                        <buildArg>-g</buildArg>
+                        <!-- macOS-specific initialization policies -->
+                        <buildArg>--initialize-at-build-time=apple.security.AppleProvider</buildArg>
+                        <buildArg>--initialize-at-build-time=apple.security.AppleProvider$ProviderService</buildArg>
+                    </buildArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

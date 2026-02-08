@@ -1,7 +1,7 @@
 package io.github.finoid.bank.domain.maven.plugin.parser.csv;
 
 import io.github.finoid.bank.domain.maven.plugin.util.Precondition;
-import org.codehaus.plexus.component.annotations.Component;
+import javax.inject.Named;
 import org.jspecify.annotations.Nullable;
 
 import javax.inject.Inject;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Singleton
-@Component(role = ValueConverter.class)
+@Named
 public class ValueConverter {
     private final Map<Class<?>, Converter<String, ?>> converters;
 

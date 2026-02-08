@@ -10,19 +10,18 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>bankdomain-values-wasm</artifactId>
+    <artifactId>bankdomain-values-wasm-teavm</artifactId>
     <name>finoid-bankdomain-values-wasm</name>
     <description>WASM module for finoid-bank-domain-values</description>
 
     <properties>
-        <java.version>17</java.version>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.release>17</maven.compiler.release>
+        <java.version>25</java.version>
+        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <teavm.version>0.13.0</teavm.version>
 
         <code-quality.feature.error-prone>false</code-quality.feature.error-prone>
@@ -55,6 +54,27 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-webapp-to-teavm-output</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/generated/wasm/teavm</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/webapp</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.teavm</groupId>
                 <artifactId>teavm-maven-plugin</artifactId>
