@@ -220,6 +220,7 @@
                                     <includes>
                                         <include>GraalVM</include>
                                         <include>GraalVM Community</include>
+                                        <include>Oracle Corporation</include>
                                     </includes>
                                     <message>A GraalVM JDK is required. Current vendor: ${java.vendor}</message>
                                 </requireJavaVendor>
