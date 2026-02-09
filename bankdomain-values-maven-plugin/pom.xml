@@ -41,7 +41,7 @@
         <maven.version>3.9.12</maven.version>
         <mojo-executor.version>2.4.1</mojo-executor.version>
         <plexus-utils.version>4.0.2</plexus-utils.version>
-        <sisu-maven-plugin.version>0.9.0.M4</sisu-maven-plugin.version>
+        <sisu-maven-plugin.version>1.0.0</sisu-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
