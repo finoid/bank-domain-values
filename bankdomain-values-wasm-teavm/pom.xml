@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
-        <teavm.version>0.13.0</teavm.version>
+        <teavm.version>0.13.1</teavm.version>
 
         <code-quality.feature.error-prone>false</code-quality.feature.error-prone>
     </properties>
