@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>bankdomain-values-wasm-teavm</artifactId>
-    <name>finoid-bankdomain-values-wasm</name>
+    <name>finoid-bankdomain-values-wasm-teavm</name>
     <description>WASM module for finoid-bank-domain-values</description>
 
     <properties>
@@ -25,6 +25,7 @@
         <teavm.version>0.13.1</teavm.version>
 
         <code-quality.feature.error-prone>false</code-quality.feature.error-prone>
+        <code-quality.feature.checker-framework>false</code-quality.feature.checker-framework>
     </properties>
 
     <dependencies>

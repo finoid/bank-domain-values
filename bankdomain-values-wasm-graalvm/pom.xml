@@ -27,8 +27,8 @@
         <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
         <native-maven-plugin.version>0.11.4</native-maven-plugin.version>
 
-        <code-quality.feature.enabled>false</code-quality.feature.enabled>
         <code-quality.feature.error-prone>false</code-quality.feature.error-prone>
+        <code-quality.feature.checker-framework>false</code-quality.feature.checker-framework>
     </properties>
 
     <dependencies>

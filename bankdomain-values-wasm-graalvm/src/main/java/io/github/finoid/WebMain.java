@@ -8,6 +8,7 @@ import org.graalvm.webimage.api.JS;
 import org.graalvm.webimage.api.JSObject;
 import org.graalvm.webimage.api.JSString;
 
+@SuppressWarnings({"checkstyle:HideUtilityClassConstructor", "checkstyle:RegexpSinglelineJava"})
 public class WebMain {
     public static final JSObject COMPILE_BUTTON = getElementById("submit");
     public static final JSObject OUTPUT = getElementById("output");
@@ -137,6 +138,7 @@ public class WebMain {
 }
 
 @FunctionalInterface
+@SuppressWarnings("checkstyle:OneTopLevelClass")
 interface EventHandler {
     void handleEvent(final JSObject event);
 }
