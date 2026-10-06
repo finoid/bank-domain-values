@@ -105,7 +105,7 @@ public class BankAccountNumber {
          * @return a valid {@link BankAccountNumber}
          * @throws IllegalNumberBankDomainException if the input is invalid
          */
-        public static BankAccountNumber fromString(String rawInput) {
+        static BankAccountNumber fromString(String rawInput) {
             final String digitsOnly = NON_DIGITS_PATTERN.matcher(rawInput).replaceAll("");
 
             if (digitsOnly.length() < 5) {
@@ -135,7 +135,7 @@ public class BankAccountNumber {
          * @return a valid {@link BankAccountNumber}
          * @throws IllegalNumberBankDomainException if the combination is invalid
          */
-        public static BankAccountNumber fromNumbers(int clearing, int account) {
+        static BankAccountNumber fromNumbers(int clearing, int account) {
             final ClearingNumber clearingNumber = ClearingNumber.ofNumber(clearing);
             final AccountNumber accountNumber = AccountNumber.ofNumber(account);
 
@@ -154,7 +154,7 @@ public class BankAccountNumber {
          * @return a valid {@link BankAccountNumber}
          * @throws IllegalNumberBankDomainException if the input is invalid
          */
-        public static BankAccountNumber fromLong(long fullNumber) {
+        static BankAccountNumber fromLong(long fullNumber) {
             return fromString(Long.toString(fullNumber));
         }
     }
@@ -164,7 +164,7 @@ public class BankAccountNumber {
         }
 
         @SuppressWarnings("OperatorPrecedence")
-        public static void validate(final ClearingNumber clearingNumber, final AccountNumber accountNumber, final BankAndType bankAndType) {
+        static void validate(final ClearingNumber clearingNumber, final AccountNumber accountNumber, final BankAndType bankAndType) {
             final BankAccountType bankAccountType = bankAndType.getBankType().getType();
             final BankAccountSubType bankAccountSubType = bankAndType.getBankType().getSubType();
 

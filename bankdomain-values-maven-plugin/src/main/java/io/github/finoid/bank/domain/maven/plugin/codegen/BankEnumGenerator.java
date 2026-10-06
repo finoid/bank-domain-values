@@ -35,6 +35,8 @@ import java.util.stream.Collectors;
 @Singleton
 @NoArgsConstructor
 @Named
+// Text blocks are unsupported by the QDox parser used by maven-plugin-plugin
+@SuppressWarnings("StringConcatToTextBlock")
 public class BankEnumGenerator {
     private static final ClassName BANK_ACCOUNT_TYPE = ClassName.get("io.github.finoid.bank.domain", "BankAccountType");
     private static final ClassName BANK_ACCOUNT_SUB_TYPE = ClassName.get("io.github.finoid.bank.domain", "BankAccountSubType");

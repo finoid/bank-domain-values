@@ -122,7 +122,7 @@ public class ClearingNumber {
     }
 
     private static class Factory {
-        public static ClearingNumber parse(int number) {
+        static ClearingNumber parse(int number) {
             if (number >= 10_000) {
                 return new ClearingNumber(number / 10, number % 10);
             }
